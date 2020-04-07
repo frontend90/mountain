@@ -1,0 +1,92 @@
+.header 
+  background: url(../img/header/bg.jpg) no-repeat 
+  height: 100vh 
+  background-attachment: fixed
+  background-size: cover 
+  & .nav 
+    display: flex 
+    justify-content: space-between
+    align-items: center
+    padding-top: 35px 
+    & .logo 
+      display: flex 
+      align-items: center
+      & img  
+        width: 15% 
+      & h1 
+        text-transform: uppercase
+        font-weight: 500
+        font-size: 35px 
+        margin-left: 10px 
+        & a
+          color: #000000 
+          & span 
+            font-weight: bold 
+    & .menu 
+      & .burger 
+        position: relative
+        display: flex 
+        align-items: center
+        justify-content: center
+        width: 34px 
+        height: 44px 
+        cursor: pointer
+        &:hover span
+          background: #ffffff
+        &:hover span::before 
+          background: #ffffff
+        &:hover span::after 
+          background: #ffffff
+        & span 
+          background: #000000
+          height: 3px 
+          width: 30px 
+          &::before
+            content: ''
+            position: absolute
+            height: 3px 
+            width: 30px 
+            background: #000000
+            top: 10px 
+          &::after 
+            content: ''
+            position: absolute
+            height: 3px 
+            width: 30px 
+            background: #000000
+            bottom: 10px 
+      & .menu-link 
+        position: fixed 
+        top: 0
+        left: 0
+        width: 200px 
+        height: 100%
+        z-index: 999
+        background: #333332
+        box-shadow: inset -10px 0 6px -9px rgba(#000000,.7)
+        overflow: auto
+        transform: translateX(-100%)
+        transition: .3s linear 
+        &.show 
+          transform: translateX(0)
+        & a 
+          display: block 
+          font-size: 15px 
+          font-weight: bold 
+          color: #b3b3b1
+          padding: 15px 30px 
+          border-bottom: 1px solid rgba(#000000,.1)
+          border-top: 1px solid rgba(#ffffff,.1)
+          &:last-of-type
+            border-bottom: 1px solid rgba(#ffffff,.1)
+          &:hover
+            background: #00b4ff
+            color: #ffffff
+
+
+
+
+
+
+
+
