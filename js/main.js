@@ -1,11 +1,10 @@
-/*************     search-input    ****************************/
+/*************     menu-link    ****************************/
 $('.burger').click(function () {
+  $('.menu-overlay').addClass('show').css("transition-delay", "0s");
   $('.menu-link').addClass('show');
 });
 
-$(document).on('click', function (e) {
-  if (!$(e.target).closest(".burger").length) {
-    $('.menu-link').removeClass('show');
-  }
-  e.stopPropagation();
+$('.close').click(function () {
+  $('.menu-overlay').removeClass('show').css("transition-delay", ".5s");
+  $('.menu-link').removeClass('show');
 });

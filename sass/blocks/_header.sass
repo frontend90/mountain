@@ -55,33 +55,106 @@
             width: 30px 
             background: #000000
             bottom: 10px 
-      & .menu-link 
+      & .menu-overlay
         position: fixed 
         top: 0
         left: 0
-        width: 200px 
+        width: 100%
         height: 100%
+        background: rgba(#000000,.5)
         z-index: 999
-        background: #333332
-        box-shadow: inset -10px 0 6px -9px rgba(#000000,.7)
-        overflow: auto
-        transform: translateX(-100%)
-        transition: .3s linear 
+        transform: translateY(-100%)
         &.show 
-          transform: translateX(0)
-        & a 
-          display: block 
-          font-size: 15px 
-          font-weight: bold 
-          color: #b3b3b1
-          padding: 15px 30px 
-          border-bottom: 1px solid rgba(#000000,.1)
-          border-top: 1px solid rgba(#ffffff,.1)
-          &:last-of-type
-            border-bottom: 1px solid rgba(#ffffff,.1)
-          &:hover
-            background: #00b4ff
-            color: #ffffff
+          transform: translateY(0)
+        & .menu-link 
+          width: 200px 
+          height: 100%
+          background: #333332
+          box-shadow: inset -10px 0 6px -9px rgba(#000000,.7)
+          overflow: auto
+          transform: translateX(-100%)
+          transition: .3s linear 
+          position: relative
+          &.show 
+            transform: translateX(0)
+          & .close 
+            position: absolute
+            background: #b3b3b1
+            box-shadow: 0 0 10px rgba(#000000,.5)
+            border-radius: 50%
+            width: 20px 
+            height: 20px 
+            right: 15px 
+            bottom: 15px 
+            display: flex
+            align-items: center
+            justify-content: center
+            cursor: pointer
+            transition: .3s linear 
+            &:hover
+              transform: rotate(45deg)
+            &::before
+              content: ''
+              position: absolute
+              width: 2px 
+              height: 15px 
+              background: #ffffff
+            &::after
+              content: ''
+              position: absolute
+              width: 2px 
+              height: 15px 
+              background: #ffffff
+              transform: rotate(90deg) 
+          & a 
+            display: block 
+            font-size: 15px 
+            font-weight: bold 
+            color: #b3b3b1
+            padding: 15px 30px 
+            border-bottom: 1px solid rgba(#000000,.1)
+            border-top: 1px solid rgba(#ffffff,.1)
+            &:last-of-type
+              border-bottom: 1px solid rgba(#ffffff,.1)
+            &:hover
+              background: #00b4ff
+              color: #ffffff
+  & .header-title
+    margin-top: 100px 
+    text-align: center
+    color: #ffffff
+    & h5 
+      font-size: 47px 
+      +rob_reg 
+      line-height: 1
+      font-weight: normal
+    & h4 
+      +rob_reg 
+      font-size: 72px 
+      line-height: 1.1
+      margin-top: 10px 
+    & p 
+      margin: 80px auto 0 
+      font-size: 21px 
+      width: 700px 
+    & .btn 
+      margin-top: 50px 
+      & button 
+        padding: 14px 16px 
+        color: #ffffff
+        font-size: 20px 
+        line-height: 1.3
+      & .learn 
+        background: #36c4c5
+        transition: .3s linear 
+        &:hover
+          background: #2da4a5
+      & .download 
+        background: #f42257
+        transition: .3s linear 
+        &:hover
+          background: #e20b41
+      
 
 
 
