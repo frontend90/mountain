@@ -1,0 +1,42 @@
+.footer 
+  padding: 30px 0 
+  background: rgba(36, 50, 59, 1)
+  & .footer-wrap 
+    display: flex 
+    align-items: center
+    justify-content: space-between
+    & .block 
+      color: #ffffff
+      & h5 
+        margin-top: 20px 
+        font-size: 34px 
+        +rob_reg 
+        font-weight: 500 
+        line-height: 1.1 
+      & p 
+        margin-top: 35px 
+        & a 
+          color: #36c4c5
+          &:hover
+            text-decoration: underline
+      & .social 
+        & a 
+          margin-left: 5px 
+          &:first-of-type
+            margin-left: 0
+          & .fab 
+            +brand 
+            color: #ffffff
+            border: 3px solid #ffffff
+            border-radius: 50%
+            width: 30px 
+            height: 30px 
+            display: inline-flex
+            align-items: center
+            justify-content: center 
+            transition: .3s linear 
+            &:hover
+              color: rgba(#ffffff,.5)
+
+
+

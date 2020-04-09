@@ -68,3 +68,12 @@ $(document).on('click', function (e) {
   }
   e.stopPropagation();
 });
+
+/***************    WOW     ***************/
+wow = new WOW({
+  boxClass: 'wow', // default
+  animateClass: 'animated', // default
+  offset: 0 // default
+})
+wow.init();
+
